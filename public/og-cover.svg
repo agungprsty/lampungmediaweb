@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1e1b4b"/>
+      <stop offset="1" stop-color="#312e81"/>
+    </linearGradient>
+    <linearGradient id="mark" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#4f46e5"/>
+      <stop offset="0.55" stop-color="#7c3aed"/>
+      <stop offset="1" stop-color="#14b8a6"/>
+    </linearGradient>
+  </defs>
+  <rect fill="url(#bg)" width="1200" height="630"/>
+  <circle cx="1040" cy="90" r="260" fill="#4f46e5" opacity="0.35"/>
+  <circle cx="120" cy="560" r="240" fill="#14b8a6" opacity="0.18"/>
+  <g transform="translate(120 250)">
+    <rect fill="url(#mark)" rx="18" width="96" height="96" transform="scale(1.1)"/>
+    <path d="M30 70V42l14 18 10-16 10 16 9-17v27" stroke="#fff" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" transform="translate(-12 -10)"/>
+    <path d="M72 62l15 9-15 9z" fill="#fff" transform="translate(-12 -10)"/>
+  </g>
+  <text x="280" y="292" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="44" font-weight="700" letter-spacing="2">Jasa Pembuatan Website di Lampung</text>
+  <text x="280" y="360" fill="#a5b4fc" font-family="Arial, Helvetica, sans-serif" font-size="28">lampung<span fill="#14b8a6">media</span><tspan fill="#818cf8">web</tspan> · Software House Bandar Lampung</text>
+  <text x="280" y="420" fill="#c7d2fe" font-family="Arial, Helvetica, sans-serif" font-size="22">Company Profile · Toko Online · Aplikasi Web · SEO</text>
+</svg>
