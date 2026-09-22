@@ -247,7 +247,7 @@ const testimonials = [
 
 <template>
     <!-- Hero -->
-    <section class="relative overflow-hidden bg-brand-900 pt-28 pb-16 text-white lg:pt-44 lg:pb-28">
+    <section class="relative overflow-hidden bg-brand-900 pt-20 pb-12 text-white sm:pt-28 sm:pb-16 lg:pt-36 lg:pb-24">
         <div class="pointer-events-none absolute inset-0" aria-hidden="true">
           <div class="absolute -right-20 -top-20 h-96 w-96 rounded-full bg-brand-600/30 blur-3xl"></div>
           <div class="absolute -bottom-24 -left-16 h-80 w-80 rounded-full bg-accent-500/20 blur-3xl"></div>
@@ -257,31 +257,31 @@ const testimonials = [
 
         <div class="relative mx-auto grid max-w-6xl gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:items-center lg:gap-16 lg:px-8">
           <div class="text-center lg:text-left">
-            <h1 class="text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
+            <h1 class="text-[28px] font-extrabold leading-[1.15] tracking-tight sm:text-4xl lg:text-5xl">
               Jasa Pembuatan Website<br />
               <span class="text-brand-300">Lampung & Bandar Lampung</span>
             </h1>
 
-            <p class="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-brand-100/90 sm:mx-0">
+            <p class="mx-auto mt-4 max-w-xl text-[15px] leading-relaxed text-brand-100/90 sm:mt-6 sm:text-base lg:text-lg sm:mx-0">
               Software house di Bandar Lampung yang membuat website bisnis cepat, kredibel, dan mudah ditemukan
               di Google — untuk UMKM, klinik, toko online, hingga perusahaan di seluruh Provinsi Lampung.
             </p>
 
-            <div class="mt-8 flex flex-col justify-center gap-3 sm:flex-row sm:gap-4 lg:justify-start">
+            <div class="mt-6 flex flex-col justify-center gap-3 sm:mt-8 sm:flex-row sm:gap-4 lg:justify-start">
               <a :href="wa('Halo LampungMediaWeb, saya ingin bikin website. Tolong info paket & harganya.')" target="_blank" rel="noopener"
-                class="inline-flex items-center justify-center gap-2 rounded-full bg-accent-500 px-8 py-4 text-lg font-bold text-brand-900 shadow-lg shadow-accent-500/25 transition-all hover:-translate-y-0.5 hover:bg-accent-600">
+                class="inline-flex items-center justify-center gap-2 rounded-full bg-accent-500 px-6 py-3 text-base font-bold text-brand-900 shadow-lg shadow-accent-500/25 transition-all hover:-translate-y-0.5 hover:bg-accent-600 sm:px-8 sm:py-4 sm:text-lg">
                 Konsultasi Gratis
                 <AppIcon name="arrowRight" class="h-5 w-5" />
               </a>
               <a href="#harga"
-                class="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white/25 px-8 py-4 text-lg font-bold text-white transition-colors hover:border-white hover:bg-white/10">
+                class="inline-flex items-center justify-center gap-2 rounded-full border-2 border-white/25 px-6 py-3 text-base font-bold text-white transition-colors hover:border-white hover:bg-white/10 sm:px-8 sm:py-4 sm:text-lg">
                 Lihat Paket
               </a>
             </div>
 
-            <div class="mt-10 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-sm font-semibold text-brand-100 lg:justify-start">
+            <div class="mt-8 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-xs font-semibold text-brand-100 sm:gap-x-6 sm:gap-y-3 sm:text-sm lg:justify-start">
               <span v-for="badge in ['Gratis Domain .com', 'Garansi 30 Hari', 'Support 24/7']" :key="badge" class="inline-flex items-center gap-2">
-                <AppIcon name="check" class="h-5 w-5 text-accent-500" />
+                <AppIcon name="check" class="h-4 w-4 sm:h-5 sm:w-5 text-accent-500" />
                 {{ badge }}
               </span>
             </div>
@@ -340,36 +340,36 @@ const testimonials = [
         </div>
 
         <!-- Trust strip -->
-        <div class="relative mx-auto mt-16 max-w-6xl px-4 sm:px-6 lg:mt-24 lg:px-8">
-          <div class="grid grid-cols-3 divide-x divide-white/10 rounded-2xl border border-white/10 bg-white/5 py-6 text-center backdrop-blur lg:py-8">
+        <div class="relative mx-auto mt-10 max-w-6xl px-4 sm:px-6 lg:mt-16 lg:px-8">
+          <div class="grid grid-cols-3 divide-x divide-white/10 rounded-2xl border border-white/10 bg-white/5 py-5 text-center backdrop-blur sm:py-6 lg:py-8">
             <div class="px-2">
-              <p class="text-3xl font-extrabold text-white lg:text-4xl">100+</p>
-              <p class="mt-1 text-xs font-semibold text-brand-200 lg:text-sm">Proyek Selesai</p>
+              <p class="text-2xl font-extrabold text-white sm:text-3xl lg:text-4xl">100+</p>
+              <p class="mt-1 text-[11px] font-semibold text-brand-200 sm:text-xs lg:text-sm">Proyek Selesai</p>
             </div>
             <div class="px-2">
-              <p class="text-3xl font-extrabold text-white lg:text-4xl">4.9<span class="text-lg text-brand-200">/5</span></p>
-              <p class="mt-1 text-xs font-semibold text-brand-200 lg:text-sm">Rating Klien</p>
+              <p class="text-2xl font-extrabold text-white sm:text-3xl lg:text-4xl">4.9<span class="text-base sm:text-lg text-brand-200">/5</span></p>
+              <p class="mt-1 text-[11px] font-semibold text-brand-200 sm:text-xs lg:text-sm">Rating Klien</p>
             </div>
             <div class="px-2">
-              <p class="text-3xl font-extrabold text-white lg:text-4xl">8<span class="text-lg text-brand-200">th</span></p>
-              <p class="mt-1 text-xs font-semibold text-brand-200 lg:text-sm">Pengalaman</p>
+              <p class="text-2xl font-extrabold text-white sm:text-3xl lg:text-4xl">8<span class="text-base sm:text-lg text-brand-200">th</span></p>
+              <p class="mt-1 text-[11px] font-semibold text-brand-200 sm:text-xs lg:text-sm">Pengalaman</p>
             </div>
           </div>
         </div>
       </section>
 
       <!-- Services -->
-      <section id="layanan" class="scroll-mt-20 py-20 lg:py-28">
+      <section id="layanan" class="scroll-mt-20 py-14 sm:py-16 lg:py-24">
         <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div class="reveal max-w-2xl">
-            <p class="text-sm font-bold tracking-wider text-brand-600 uppercase">Layanan</p>
-            <h2 class="mt-2 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
+            <p class="text-xs font-bold tracking-wider text-brand-600 uppercase sm:text-sm">Layanan</p>
+            <h2 class="mt-2 text-2xl font-extrabold tracking-tight text-slate-900 sm:text-3xl">
               Solusi Digital Sesuai Kebutuhan Bisnis Anda
             </h2>
-            <p class="mt-4 text-lg text-slate-600">Bukan sekadar pajangan — website yang kami bangun adalah mesin pencetak omzet.</p>
+            <p class="mt-3 text-base leading-relaxed text-slate-600 sm:mt-4 sm:text-lg">Bukan sekadar pajangan — website yang kami bangun adalah mesin pencetak omzet.</p>
           </div>
 
-          <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:mt-16 lg:grid-cols-4">
+          <div class="mt-8 grid gap-4 sm:grid-cols-2 sm:gap-6 lg:mt-12 lg:grid-cols-4">
             <div v-for="s in services" :key="s.title"
               class="reveal group rounded-2xl border border-slate-200 bg-white p-6 transition-all hover:-translate-y-1 hover:border-brand-300 hover:shadow-xl hover:shadow-brand-500/5">
               <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-50 text-brand-600 transition-transform group-hover:scale-110">
@@ -389,16 +389,16 @@ const testimonials = [
       </section>
 
       <!-- Process -->
-      <section id="proses" class="scroll-mt-20 border-y border-slate-100 bg-slate-50 py-20 lg:py-28">
+      <section id="proses" class="scroll-mt-20 border-y border-slate-100 bg-slate-50 py-14 sm:py-16 lg:py-24">
         <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div class="reveal max-w-2xl">
-            <p class="text-sm font-bold tracking-wider text-brand-600 uppercase">Cara Kami Bekerja</p>
-            <h2 class="mt-2 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
+            <p class="text-xs font-bold tracking-wider text-brand-600 uppercase sm:text-sm">Cara Kami Bekerja</p>
+            <h2 class="mt-2 text-2xl font-extrabold tracking-tight text-slate-900 sm:text-3xl">
               Transparan dari Awal sampai Launch
             </h2>
           </div>
 
-          <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4 lg:mt-16">
+          <div class="mt-8 grid gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-4 lg:mt-12">
             <div v-for="(p, i) in process" :key="p.step"
               class="reveal relative rounded-2xl border border-slate-200 bg-white p-6">
               <span class="text-3xl font-extrabold text-brand-200">{{ p.step }}</span>
@@ -411,17 +411,17 @@ const testimonials = [
       </section>
 
       <!-- Pricing -->
-      <section id="harga" class="scroll-mt-20 py-20 lg:py-28">
+      <section id="harga" class="scroll-mt-20 py-14 sm:py-16 lg:py-24">
         <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div class="reveal mx-auto max-w-2xl text-center">
-            <p class="text-sm font-bold tracking-wider text-brand-600 uppercase">Paket Harga</p>
-            <h2 class="mt-2 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
+            <p class="text-xs font-bold tracking-wider text-brand-600 uppercase sm:text-sm">Paket Harga</p>
+            <h2 class="mt-2 text-2xl font-extrabold tracking-tight text-slate-900 sm:text-3xl">
               Harga Transparan, Tanpa Biaya Tersembunyi
             </h2>
-            <p class="mt-4 text-lg text-slate-600">Semua paket sudah termasuk domain, hosting, dan desain. Cukup isi konten.</p>
+            <p class="mt-3 text-base leading-relaxed text-slate-600 sm:mt-4 sm:text-lg">Semua paket sudah termasuk domain, hosting, dan desain. Cukup isi konten.</p>
           </div>
 
-          <div class="mt-12 grid items-start gap-6 lg:mt-16 lg:grid-cols-3">
+          <div class="mt-8 grid items-start gap-4 sm:gap-6 lg:mt-12 lg:grid-cols-3">
             <div v-for="plan in plans" :key="plan.name"
               :class="[
                 'reveal relative rounded-2xl border bg-white p-7',
@@ -431,12 +431,12 @@ const testimonials = [
                 Paling Populer
               </span>
 
-              <h3 class="text-xl font-bold text-slate-900">{{ plan.name }}</h3>
+              <h3 class="text-lg font-bold text-slate-900 sm:text-xl">{{ plan.name }}</h3>
               <p class="mt-1 text-sm text-slate-500">{{ plan.desc }}</p>
 
-              <div class="mt-5">
-                <p class="text-sm font-bold text-slate-400 line-through">{{ plan.original }}</p>
-                <p class="mt-0.5 text-4xl font-extrabold tracking-tight text-slate-900">{{ plan.price }}</p>
+              <div class="mt-4 sm:mt-5">
+                <p class="text-xs font-bold text-slate-400 line-through sm:text-sm">{{ plan.original }}</p>
+                <p class="mt-0.5 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">{{ plan.price }}</p>
                 <p class="mt-1 text-xs font-medium text-slate-500">{{ plan.renewal }}</p>
               </div>
 
@@ -463,16 +463,16 @@ const testimonials = [
       </section>
 
       <!-- Portfolio -->
-      <section id="proyek" class="scroll-mt-20 border-y border-slate-100 bg-slate-50 py-20 lg:py-28">
+      <section id="proyek" class="scroll-mt-20 border-y border-slate-100 bg-slate-50 py-14 sm:py-16 lg:py-24">
         <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div class="reveal max-w-2xl">
-            <p class="text-sm font-bold tracking-wider text-brand-600 uppercase">Proyek Terpilih</p>
-            <h2 class="mt-2 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
+            <p class="text-xs font-bold tracking-wider text-brand-600 uppercase sm:text-sm">Proyek Terpilih</p>
+            <h2 class="mt-2 text-2xl font-extrabold tracking-tight text-slate-900 sm:text-3xl">
               Karya yang Berdampak untuk Klien Kami
             </h2>
           </div>
 
-          <div class="mt-12 grid gap-6 md:grid-cols-2 lg:mt-16 lg:grid-cols-3">
+          <div class="mt-8 grid gap-4 md:grid-cols-2 sm:gap-6 lg:mt-12 lg:grid-cols-3">
             <a v-for="p in portfolio" :key="p.title" href="#" @click.prevent
               class="reveal group overflow-hidden rounded-2xl border border-slate-200 bg-white transition-all hover:-translate-y-1 hover:shadow-xl">
               <div class="relative aspect-[4/3] overflow-hidden border-b border-slate-100" aria-hidden="true">
@@ -514,16 +514,16 @@ const testimonials = [
       </section>
 
       <!-- Testimonials -->
-      <section class="py-20 lg:py-28">
+      <section class="py-14 sm:py-16 lg:py-24">
         <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div class="reveal mx-auto max-w-2xl text-center">
-            <p class="text-sm font-bold tracking-wider text-brand-600 uppercase">Testimoni</p>
-            <h2 class="mt-2 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
+            <p class="text-xs font-bold tracking-wider text-brand-600 uppercase sm:text-sm">Testimoni</p>
+            <h2 class="mt-2 text-2xl font-extrabold tracking-tight text-slate-900 sm:text-3xl">
               Apa Kata Klien Kami
             </h2>
           </div>
 
-          <div class="mt-12 grid gap-6 md:grid-cols-3 lg:mt-16">
+          <div class="mt-8 grid gap-4 md:grid-cols-3 sm:gap-6 lg:mt-12">
             <figure v-for="t in testimonials" :key="t.name"
               class="reveal flex flex-col justify-between rounded-2xl border border-slate-200 bg-slate-50 p-7">
               <div>
@@ -547,17 +547,17 @@ const testimonials = [
       </section>
 
       <!-- FAQ -->
-      <section id="faq" class="scroll-mt-20 border-t border-slate-100 bg-slate-50 py-20 lg:py-28">
+      <section id="faq" class="scroll-mt-20 border-t border-slate-100 bg-slate-50 py-14 sm:py-16 lg:py-24">
         <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <div class="reveal text-center">
-            <p class="text-sm font-bold tracking-wider text-brand-600 uppercase">Pertanyaan Umum</p>
-            <h2 class="mt-2 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
+            <p class="text-xs font-bold tracking-wider text-brand-600 uppercase sm:text-sm">Pertanyaan Umum</p>
+            <h2 class="mt-2 text-2xl font-extrabold tracking-tight text-slate-900 sm:text-3xl">
               Jasa Website Lampung — Tanya Jawab
             </h2>
           </div>
 
-          <div class="mt-12 space-y-4">
-            <details v-for="f in faq" :key="f.q" class="reveal group rounded-2xl border border-slate-200 bg-white p-6 open:border-brand-300 open:shadow-lg">
+          <div class="mt-8 space-y-3 sm:space-y-4">
+            <details v-for="f in faq" :key="f.q" class="reveal group rounded-2xl border border-slate-200 bg-white p-4 sm:p-6 open:border-brand-300 open:shadow-lg">
               <summary class="flex cursor-pointer list-none items-center justify-between gap-4 font-bold text-slate-900">
                 {{ f.q }}
                 <span class="shrink-0 text-brand-600 transition-transform group-open:rotate-45">
@@ -571,25 +571,25 @@ const testimonials = [
       </section>
 
       <!-- CTA -->
-      <section class="relative overflow-hidden bg-brand-900 py-20 lg:py-28" aria-hidden="false">
+      <section class="relative overflow-hidden bg-brand-900 py-14 sm:py-16 lg:py-24" aria-hidden="false">
         <div class="pointer-events-none absolute inset-0" aria-hidden="true">
           <div class="absolute -right-16 -top-16 h-96 w-96 rounded-full bg-brand-600/40 blur-3xl"></div>
           <div class="absolute -bottom-20 -left-16 h-80 w-80 rounded-full bg-accent-500/20 blur-3xl"></div>
         </div>
 
         <div class="relative mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
-          <h2 class="text-3xl font-extrabold tracking-tight text-white sm:text-4xl lg:text-5xl">
+          <h2 class="text-2xl font-extrabold tracking-tight text-white sm:text-3xl lg:text-4xl">
             Siap Membesarkan Bisnis Anda?
           </h2>
-          <p class="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-brand-100">
+          <p class="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-brand-100 sm:mt-5 sm:text-lg">
             Konsultasikan kebutuhan website Anda secara <strong class="text-white">gratis</strong>. Kami bantu pilih solusi terbaik sesuai budget.
           </p>
           <a :href="wa('Halo LampungMediaWeb, saya ingin konsultasi gratis bikin website')" target="_blank" rel="noopener"
-            class="mt-9 inline-flex items-center gap-3 rounded-full bg-accent-500 px-10 py-5 text-xl font-bold text-brand-900 shadow-xl shadow-accent-500/25 transition-all hover:-translate-y-1 hover:bg-accent-600">
+            class="mt-7 inline-flex items-center gap-3 rounded-full bg-accent-500 px-7 py-3.5 text-base font-bold text-brand-900 shadow-xl shadow-accent-500/25 transition-all hover:-translate-y-1 hover:bg-accent-600 sm:mt-9 sm:px-10 sm:py-5 sm:text-lg">
             Mulai Sekarang
-            <AppIcon name="arrowRight" class="h-6 w-6" />
+            <AppIcon name="arrowRight" class="h-5 w-5 sm:h-6 sm:w-6" />
           </a>
-          <p class="mt-6 text-sm font-medium text-brand-200">
+          <p class="mt-5 text-xs font-medium text-brand-200 sm:mt-6 sm:text-sm">
             Garansi uang kembali 30 hari &bull; Layanan pelanggan 24/7
           </p>
         </div>

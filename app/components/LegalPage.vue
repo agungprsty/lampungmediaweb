@@ -13,22 +13,22 @@ const props = withDefaults(defineProps<{
 </script>
 
 <template>
-  <section class="pt-28 pb-20 lg:pt-40 lg:pb-28">
+  <section class="pt-20 pb-12 sm:pt-28 sm:pb-16 lg:pt-32 lg:pb-20">
     <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-      <p class="text-sm font-bold uppercase tracking-widest text-brand-600">Dokumen Legal</p>
-      <h1 class="mt-3 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">{{ title }}</h1>
-      <p class="mt-3 text-sm font-semibold text-slate-500">Terakhir diperbarui: {{ updated }}</p>
+      <p class="text-xs font-bold uppercase tracking-widest text-brand-600 sm:text-sm">Dokumen Legal</p>
+      <h1 class="mt-2 text-2xl font-extrabold tracking-tight text-slate-900 sm:mt-3 sm:text-3xl">{{ title }}</h1>
+      <p class="mt-2 text-xs font-semibold text-slate-500 sm:mt-3 sm:text-sm">Terakhir diperbarui: {{ updated }}</p>
 
-      <p v-if="intro" class="mt-6 leading-relaxed text-slate-600">{{ intro }}</p>
+      <p v-if="intro" class="mt-5 text-sm leading-relaxed text-slate-600 sm:mt-6 sm:text-base">{{ intro }}</p>
 
-      <div class="mt-10 space-y-10">
+      <div class="mt-8 space-y-8 sm:mt-10 sm:space-y-10">
         <section v-for="s in sections" :key="s.heading">
-          <h2 class="text-xl font-extrabold text-slate-900">{{ s.heading }}</h2>
-          <p v-for="(b, i) in s.body" :key="i" class="mt-3 leading-relaxed text-slate-600">{{ b }}</p>
+          <h2 class="text-lg font-extrabold text-slate-900 sm:text-xl">{{ s.heading }}</h2>
+          <p v-for="(b, i) in s.body" :key="i" class="mt-3 text-sm leading-relaxed text-slate-600 sm:text-base">{{ b }}</p>
         </section>
       </div>
 
-      <div class="mt-14 rounded-2xl border border-brand-200 bg-brand-50 p-6">
+      <div class="mt-10 rounded-2xl border border-brand-200 bg-brand-50 p-5 sm:mt-14 sm:p-6">
         <p class="font-bold text-brand-900">Ada pertanyaan seputar dokumen ini?</p>
         <p class="mt-1 text-sm leading-relaxed text-brand-800">
           Hubungi kami via WhatsApp atau email <a href="mailto:halo@lampungmediaweb.com" class="font-bold underline">halo@lampungmediaweb.com</a>.

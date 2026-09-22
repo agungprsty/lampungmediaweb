@@ -35,21 +35,21 @@ useHead({
 </script>
 
 <template>
-  <section id="jenis" class="pt-28 pb-20 lg:pt-40 lg:pb-28">
+  <section id="jenis" class="pt-20 pb-12 sm:pt-28 sm:pb-16 lg:pt-32 lg:pb-20">
     <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
       <div class="max-w-3xl">
-        <p class="text-sm font-bold uppercase tracking-widest text-brand-600">Layanan Kami</p>
-        <h1 class="mt-3 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
+        <p class="text-xs font-bold uppercase tracking-widest text-brand-600 sm:text-sm">Layanan Kami</p>
+        <h1 class="mt-2 text-2xl font-extrabold tracking-tight text-slate-900 sm:mt-3 sm:text-3xl lg:text-4xl">
           Jenis Website yang Kami Kerjakan
         </h1>
-        <p class="mt-5 text-lg leading-relaxed text-slate-600">
+        <p class="mt-3 text-base leading-relaxed text-slate-600 sm:mt-4 sm:text-lg">
           Kami tidak kerja dengan satu template umum. Tiap bisnis beda-beda, jadi layanannya juga
           kami pecah per jenis. Cari yang paling mirip situasi Anda, atau langsung tanya
           — lebih cepat dibanding nebak sendiri.
         </p>
       </div>
 
-      <div class="mt-8 flex flex-wrap items-center gap-2" role="group" aria-label="Filter kategori layanan">
+      <div class="mt-6 flex flex-wrap items-center gap-2 sm:mt-8" role="group" aria-label="Filter kategori layanan">
         <button
           :class="active === 'Semua'
             ? 'bg-brand-600 text-white border-brand-600'
@@ -69,7 +69,7 @@ useHead({
         </button>
       </div>
 
-      <ul class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <ul class="mt-8 grid gap-4 sm:mt-10 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
         <li v-for="s in filtered" :key="s.slug" class="group">
           <NuxtLink :to="`/layanan/${s.slug}`"
             class="flex h-full flex-col rounded-2xl border border-slate-200 bg-white p-6 transition-all hover:-translate-y-1 hover:border-brand-300 hover:shadow-lg">
@@ -86,14 +86,14 @@ useHead({
         </li>
       </ul>
 
-      <div class="mt-16 rounded-3xl bg-brand-900 p-8 text-center sm:p-12">
-        <h2 class="text-2xl font-extrabold text-white sm:text-3xl">Tidak ketemu yang pas?</h2>
+      <div class="mt-10 rounded-3xl bg-brand-900 p-6 text-center sm:mt-16 sm:p-8 lg:p-12">
+        <h2 class="text-xl font-extrabold text-white sm:text-2xl lg:text-3xl">Tidak ketemu yang pas?</h2>
         <p class="mx-auto mt-3 max-w-xl leading-relaxed text-brand-100">
           Kemungkinan besar kebutuhan Anda cuma butuh dijelaskan dulu di chat. Ceritakan bisnisnya,
           kami kasih saran entah itu masuk kategori ini atau custom.
         </p>
         <a :href="wa('Halo LampungMediaWeb, saya mau konsultasi jenis website yang cocok untuk bisnis saya.')" target="_blank" rel="noopener"
-          class="mt-7 inline-flex items-center gap-2 rounded-full bg-accent-500 px-8 py-4 font-bold text-brand-900 transition-all hover:-translate-y-0.5 hover:bg-accent-600">
+          class="mt-6 inline-flex items-center gap-2 rounded-full bg-accent-500 px-6 py-3 font-bold text-brand-900 transition-all hover:-translate-y-0.5 hover:bg-accent-600 sm:mt-7 sm:px-8 sm:py-4">
           <AppIcon name="whatsapp" class="h-5 w-5" />
           Tanya ke WhatsApp
         </a>
