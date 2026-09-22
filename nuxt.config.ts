@@ -36,7 +36,7 @@ export default defineNuxtConfig({
   app: {
     head: {
       htmlAttrs: { lang: 'id' },
-      title: 'LampungMediaWeb — Jasa Pembuatan Website di Lampung & Bandar Lampung',
+      title: 'LampungMediaWeb | Jasa Pembuatan Website di Lampung dan Bandar Lampung',
       meta: [
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         { charset: 'utf-8' },
@@ -53,12 +53,12 @@ export default defineNuxtConfig({
         { property: 'og:site_name', content: 'LampungMediaWeb' },
         { property: 'og:locale', content: 'id_ID' },
         { property: 'og:url', content: 'https://lampungmediaweb.com/' },
-        { property: 'og:title', content: 'LampungMediaWeb — Jasa Pembuatan Website di Lampung & Bandar Lampung' },
+        { property: 'og:title', content: 'LampungMediaWeb | Jasa Pembuatan Website di Lampung dan Bandar Lampung' },
         { property: 'og:description', content: 'Software house di Bandar Lampung: website company profile, toko online, aplikasi web & SEO. Desain premium, super cepat, bergaransi 30 hari.' },
         { property: 'og:image', content: 'https://lampungmediaweb.com/og-cover.svg' },
-        { property: 'og:image:alt', content: 'LampungMediaWeb — Jasa Pembuatan Website Lampung' },
+        { property: 'og:image:alt', content: 'LampungMediaWeb | Jasa Pembuatan Website Lampung' },
         { name: 'twitter:card', content: 'summary_large_image' },
-        { name: 'twitter:title', content: 'LampungMediaWeb — Jasa Pembuatan Website di Lampung' },
+        { name: 'twitter:title', content: 'LampungMediaWeb | Jasa Pembuatan Website di Lampung' },
         { name: 'twitter:description', content: 'Software house Bandar Lampung: website company profile, toko online, aplikasi web & SEO. Bergaransi 30 hari.' },
         { name: 'twitter:image', content: 'https://lampungmediaweb.com/og-cover.svg' },
       ],

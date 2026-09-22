@@ -44,9 +44,9 @@ export const SERVICES: Service[] = [
   },
   {
     slug: 'toko-online',
-    title: 'Toko Online / Katalog',
+    title: 'Toko Online dan Katalog',
     icon: 'shoppingBag',
-    tagline: 'Katalog atau toko lengkap — beda harga, beda fitur.',
+    tagline: 'Katalog atau toko lengkap, beda harga beda fitur.',
     desc: 'Dua pilihan. Katalog: daftar produk + tombol order ke WhatsApp, buat yang baru mulai. Toko online: keranjang, checkout, dan pembayaran otomatis, buat yang serius jualan volume besar.',
     benefits: [
       'Katalog: order via WhatsApp',
@@ -60,7 +60,7 @@ export const SERVICES: Service[] = [
   },
   {
     slug: 'website-sales-marketing',
-    title: 'Website Sales / Marketing',
+    title: 'Website Sales dan Marketing',
     icon: 'megaphone',
     tagline: 'Website yang dipakai tim sales sebagai alat closing.',
     desc: 'Bukan website pajangan. Ini tool kerja tim sales: halaman produk/layanan untuk dikirim ke calon klien, formulir yang mengumpulkan data leads, dan isi yang menjawab keberatan pembeli sebelum mereka tanya.',
@@ -79,7 +79,7 @@ export const SERVICES: Service[] = [
     title: 'Website Tour & Travel',
     icon: 'mapPin',
     tagline: 'Paket wisata, sewa mobil, dan info destinasi jadi satu.',
-    desc: 'Buat biro wisata atau penyedia sewa kendaraan: daftar paket dengan harga jujur, form pemesanan, dan itinerary contoh. Orang membandingkan beberapa lokasi sebelum booking — website bikin informasi Anda tersaji duluan.',
+    desc: 'Buat biro wisata atau penyedia sewa kendaraan: daftar paket dengan harga jujur, form pemesanan, dan itinerary contoh. Orang biasanya bandingkan beberapa tempat sebelum booking. Website bikin info Anda tampil duluan.',
     benefits: [
       'Halaman paket lengkap dengan harga',
       'Form pemesanan ke WhatsApp',
@@ -92,7 +92,7 @@ export const SERVICES: Service[] = [
   },
   {
     slug: 'website-instansi-pemerintahan',
-    title: 'Instansi / Pemerintahan',
+    title: 'Instansi dan Pemerintahan',
     icon: 'landmark',
     tagline: 'Informasi publik yang mudah diakses warga.',
     desc: 'Website desa, kecamatan, dinas, atau lembaga publik. Fokusnya bukan menarik pengunjung, tapi membuat informasi (profil, program, pengumuman, layanan) mudah ditemukan dan gampang dinavigasi.',
@@ -103,12 +103,12 @@ export const SERVICES: Service[] = [
       'Galeri kegiatan',
       'Keamanan & backup rutin',
     ],
-    bonus: 'Proses keputusan (bidang/dinas terkait) bisa makan waktu — mulai dari pengajuan.',
+    bonus: 'Proses keputusan di bidang atau dinas terkait bisa makan waktu. Sebaiknya ajukan dari sekarang.',
     group: 'Instansi & Publik',
   },
   {
     slug: 'website-lembaga-organisasi',
-    title: 'Lembaga / Organisasi',
+    title: 'Lembaga dan Organisasi',
     icon: 'users',
     tagline: 'Komunitas, yayasan, dan asosiasi yang butuh panggung online.',
     desc: 'Website untuk organisasi non-profit: identitas, program, dan laporan kegiatan. Dibuat sederhana supaya anggota mana pun bisa update konten tanpa pelatihan rumit.',
@@ -127,7 +127,7 @@ export const SERVICES: Service[] = [
     title: 'Website Sekolah',
     icon: 'graduationCap',
     tagline: 'Info pendaftaran, profil, dan pencapaian sekolah.',
-    desc: 'Orang tua mencari sekolah secara online sebelum berkunjung. Website berisi profil, program, fasilitas, dan — bagian paling dicari — informasi penerimaan siswa baru (PPDB) dan jadwalnya.',
+    desc: 'Orang tua mencari sekolah secara online sebelum berkunjung. Website berisi profil, program, fasilitas, dan yang paling dicari yaitu info penerimaan siswa baru (PPDB) beserta jadwalnya.',
     benefits: [
       'Halaman PPDB lengkap',
       'Profil: guru, fasilitas, program',
@@ -167,15 +167,15 @@ export const SERVICES: Service[] = [
       'Form inquiry pembeli',
       'Peta lokasi',
     ],
-    bonus: 'Perlu foto yang bagus — hasilnya sangat tergantung itu.',
+    bonus: 'Hasilnya sangat tergantung foto. Jadi perlu foto yang bagus.',
     group: 'Properti & Travel',
   },
   {
     slug: 'website-hotel-penginapan',
-    title: 'Website Hotel / Penginapan',
+    title: 'Website Hotel dan Penginapan',
     icon: 'bed',
     tagline: 'Kamar, fasilitas, dan cara booking yang jelas.',
-    desc: 'Hotel, villa, atau homestay: galeri kamar, fasilitas, harga, dan cara pesan. Goal-nya satu — orang langsung booking ke WhatsApp/telepon, tanpa ragu soal fasilitas.',
+    desc: 'Hotel, villa, atau homestay: galeri kamar, fasilitas, harga, dan cara pesan. Tujuannya satu, orang langsung booking ke WhatsApp atau telepon tanpa ragu soal fasilitas.',
     benefits: [
       'Galeri kamar real (bukan render tipuan)',
       'Harga & fasilitas jujur',
@@ -188,10 +188,10 @@ export const SERVICES: Service[] = [
   },
   {
     slug: 'website-rumah-sakit-klinik',
-    title: 'Website Rumah Sakit / Klinik',
+    title: 'Website Rumah Sakit dan Klinik',
     icon: 'heartPulse',
     tagline: 'Info layanan, dokter, dan jadwal praktik.',
-    desc: 'Pasien cek jadwal dokter dan layanan lewat Google sebelum datang. Website berisi profil dokter, jadwal praktik, daftar layanan, dan cara booking — supaya mereka tidak perlu telepon satu-satu.',
+    desc: 'Pasien cek jadwal dokter dan layanan lewat Google sebelum datang. Website berisi profil dokter, jadwal praktik, daftar layanan, dan cara booking supaya mereka tidak perlu telepon satu satu.',
     benefits: [
       'Daftar dokter & jadwal praktik',
       'Layanan & fasilitas',
@@ -204,9 +204,9 @@ export const SERVICES: Service[] = [
   },
   {
     slug: 'website-resto-kuliner',
-    title: 'Website Resto / Kuliner',
+    title: 'Website Resto dan Kuliner',
     icon: 'utensils',
-    tagline: 'Menu, harga, lokasi, jam buka — yang biasanya orang cari.',
+    tagline: 'Menu, harga, lokasi, jam buka. Itu yang biasanya orang cari.',
     desc: 'Bagi pengunjung, info paling penting cuma tiga: menu apa aja, buka jam berapa, dan di mana. Website pendek yang memuat itu, plus foto, jauh lebih berguna daripada scrolling feed.',
     benefits: [
       'Menu + harga terupdate',
@@ -215,15 +215,15 @@ export const SERVICES: Service[] = [
       'Galeri foto makanan',
       'Kontak untuk katering/event',
     ],
-    bonus: 'Harga di menu harus dijaga update — kami sediakan akses edit.',
+    bonus: 'Harga di menu harus selalu update. Kami sediakan akses editnya.',
     group: 'Bisnis & Online Shop',
   },
   {
     slug: 'web-masjid-panti-asuhan',
-    title: 'Web Masjid / Panti Asuhan',
+    title: 'Website Masjid dan Panti Asuhan',
     icon: 'handHeart',
     tagline: 'Kegiatan, jadwal, dan transparansi dana.',
-    desc: 'Website masjid atau panti asuhan: jadwal ibadah/kegiatan, program, dan laporan donasi yang bisa dilihat siapa saja. Fungsinya transparansi — biar donatur tahu uangnya dipakai untuk apa.',
+    desc: 'Website masjid atau panti asuhan berisi jadwal ibadah atau kegiatan, program, dan laporan donasi yang bisa dilihat siapa saja. Fungsinya untuk transparansi, biar donatur tahu uangnya dipakai untuk apa.',
     benefits: [
       'Jadwal kegiatan & ibadah',
       'Program dan laporan donasi',
@@ -231,7 +231,7 @@ export const SERVICES: Service[] = [
       'Halaman infak/donasi',
       'Pengelolaan konten sederhana',
     ],
-    bonus: 'Kami beri harga khusus (bahkan gratis untuk masjid) — karena ini ranah sosial.',
+    bonus: 'Kami beri harga khusus, bahkan gratis untuk masjid, karena ini ranah sosial.',
     group: 'Komunitas & Sosial',
   },
   {
@@ -239,7 +239,7 @@ export const SERVICES: Service[] = [
     title: 'Website Custom',
     icon: 'layers',
     tagline: 'Kebutuhan yang tidak masuk kategori mana-mana.',
-    desc: 'Sistem internal, aplikasi booking, dashboard, atau platform khusus. Kami diskusikan dulu apa masalahnya, lalu bangun dari nol — bukan mencocokkan kebutuhan ke template yang ada.',
+    desc: 'Sistem internal, aplikasi booking, dashboard, atau platform khusus. Kami diskusikan dulu masalahnya, lalu bangun dari nol. Bukan dipaksakan ke template yang ada.',
     benefits: [
       'Diskusi kebutuhan di awal',
       'Bangun dari nol sesuai alur',

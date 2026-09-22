@@ -43,9 +43,8 @@ useHead({
           Jenis Website yang Kami Kerjakan
         </h1>
         <p class="mt-3 text-base leading-relaxed text-slate-600 sm:mt-4 sm:text-lg">
-          Kami tidak kerja dengan satu template umum. Tiap bisnis beda-beda, jadi layanannya juga
-          kami pecah per jenis. Cari yang paling mirip situasi Anda, atau langsung tanya
-          — lebih cepat dibanding nebak sendiri.
+          Kami tidak kerja dengan satu template umum. Tiap bisnis beda, jadi layanannya juga
+          kami pecah per jenis. Cari yang paling mirip situasi Anda, atau langsung tanya. Lebih cepat daripada menebak sendiri.
         </p>
       </div>
 
@@ -54,7 +53,7 @@ useHead({
           :class="active === 'Semua'
             ? 'bg-brand-600 text-white border-brand-600'
             : 'border-slate-200 bg-white text-slate-600 hover:border-brand-300 hover:text-brand-600'"
-          class="rounded-full border px-4 py-2 text-sm font-semibold transition-colors"
+          class="rounded-full border px-3 py-1.5 text-xs font-semibold transition-colors sm:px-4 sm:py-2 sm:text-sm"
           @click="active = 'Semua'">
           Semua
         </button>
@@ -63,24 +62,26 @@ useHead({
           :class="active === g
             ? 'bg-brand-600 text-white border-brand-600'
             : 'border-slate-200 bg-white text-slate-600 hover:border-brand-300 hover:text-brand-600'"
-          class="rounded-full border px-4 py-2 text-sm font-semibold transition-colors"
+          class="rounded-full border px-3 py-1.5 text-xs font-semibold transition-colors sm:px-4 sm:py-2 sm:text-sm"
           @click="active = g">
           {{ g }}
         </button>
       </div>
 
-      <ul class="mt-8 grid gap-4 sm:mt-10 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <ul class="mt-8 grid grid-cols-2 gap-3 sm:mt-10 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
         <li v-for="s in filtered" :key="s.slug" class="group">
           <NuxtLink :to="`/layanan/${s.slug}`"
-            class="flex h-full flex-col rounded-2xl border border-slate-200 bg-white p-6 transition-all hover:-translate-y-1 hover:border-brand-300 hover:shadow-lg">
-            <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-50 text-brand-600 transition-colors group-hover:bg-brand-600 group-hover:text-white">
-              <AppIcon :name="s.icon" class="h-6 w-6" />
-            </span>
-            <h3 class="mt-5 text-lg font-bold text-slate-900">{{ s.title }}</h3>
-            <p class="mt-2 flex-1 text-sm leading-relaxed text-slate-600">{{ s.tagline }}</p>
-            <span class="mt-5 inline-flex items-center gap-1.5 text-sm font-bold text-brand-600">
+            class="flex h-full flex-col rounded-xl border border-slate-200 bg-white p-4 transition-all hover:-translate-y-1 hover:border-brand-300 hover:shadow-lg sm:rounded-2xl sm:p-6">
+            <div class="flex flex-col gap-2.5 sm:flex-row sm:items-center sm:gap-3">
+              <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-brand-50 text-brand-600 transition-colors group-hover:bg-brand-600 group-hover:text-white sm:h-12 sm:w-12">
+                <AppIcon :name="s.icon" class="h-5 w-5 sm:h-6 sm:w-6" />
+              </span>
+              <h3 class="text-base font-bold leading-tight text-slate-900 sm:flex sm:min-h-12 sm:flex-1 sm:items-center sm:text-[17px] lg:text-lg">{{ s.title }}</h3>
+            </div>
+            <p class="mt-2.5 flex-1 text-xs leading-relaxed text-slate-600 sm:mt-3 sm:text-sm">{{ s.tagline }}</p>
+            <span class="mt-3 inline-flex items-center gap-1 text-xs font-bold text-brand-600 sm:mt-4 sm:gap-1.5 sm:text-sm">
               Lihat Detail
-              <AppIcon name="arrowRight" class="h-4 w-4" />
+              <AppIcon name="arrowRight" class="h-3.5 w-3.5 sm:h-4 sm:w-4" />
             </span>
           </NuxtLink>
         </li>

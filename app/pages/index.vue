@@ -25,7 +25,7 @@ useHead({
           addressCountry: 'ID',
         },
         geo: { '@type': 'GeoCoordinates', latitude: -5.45, longitude: 105.2531 },
-        priceRange: 'Rp 999.000 - Rp 4.900.000',
+        priceRange: 'Rp 1.500.000 - Rp 7.000.000',
         openingHours: 'Mo-Sa 08:00-21:00',
         aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', reviewCount: '100' },
         sameAs: [
@@ -34,9 +34,9 @@ useHead({
           'https://www.linkedin.com/company/lampungmediaweb',
         ],
         makesOffer: [
-          { '@type': 'Offer', name: 'UMKM Starter', price: '999000', priceCurrency: 'IDR' },
-          { '@type': 'Offer', name: 'Company Profile', price: '2400000', priceCurrency: 'IDR' },
-          { '@type': 'Offer', name: 'Toko Online', price: '4900000', priceCurrency: 'IDR' },
+          { '@type': 'Offer', name: 'UMKM Starter', price: '1500000', priceCurrency: 'IDR' },
+          { '@type': 'Offer', name: 'Company Profile', price: '3500000', priceCurrency: 'IDR' },
+          { '@type': 'Offer', name: 'Toko Online', price: '7000000', priceCurrency: 'IDR' },
         ],
       }),
     },
@@ -115,9 +115,9 @@ const plans = [
   {
     name: 'UMKM Starter',
     desc: 'Untuk bisnis yang baru mulai tampil online.',
-    price: 'Rp 999rb',
-    original: 'Rp 1.500.000',
-    renewal: '+ Rp 350rb/tahun',
+    price: 'Rp 1,5jt',
+    original: 'Rp 2.000.000',
+    renewal: '+ Rp 800rb/tahun',
     cta: 'Pilih Paket',
     featured: false,
     perks: ['Gratis domain & hosting 1GB SSD', '3 halaman desain premium', 'Tombol chat WhatsApp', 'Setup Google indexing'],
@@ -125,10 +125,10 @@ const plans = [
   {
     name: 'Company Profile',
     desc: 'Membangun kredibilitas & kepercayaan pelanggan.',
-    price: 'Rp 2,4jt',
-    original: 'Rp 3.500.000',
-    badge: 'Hemat 30%',
-    renewal: '+ Rp 500rb/tahun',
+    price: 'Rp 3,5jt',
+    original: 'Rp 4.000.000',
+    badge: 'Hemat 12%',
+    renewal: '+ Rp 1jt/tahun',
     cta: 'Tambah ke Troli',
     featured: true,
     perks: ['Semua fitur Starter', 'Unlimited bandwidth', 'Hingga 10 halaman', 'Custom email (@nama.com)', 'Gratis maintenance 1 bulan'],
@@ -136,12 +136,22 @@ const plans = [
   {
     name: 'Toko Online',
     desc: 'Siap jualan ke seluruh Indonesia.',
-    price: 'Rp 4,9jt',
-    original: 'Mulai Rp 7.000.000',
-    renewal: '+ Rp 800rb/tahun',
+    price: 'Rp 7jt',
+    original: 'Rp 8.500.000',
+    renewal: '+ Rp 2,5jt/tahun',
     cta: 'Hubungi Kami',
     featured: false,
     perks: ['Semua fitur Pro', 'Keranjang belanja', 'Ongkir otomatis JNE/J&T', 'Payment gateway (QRIS, BCA)', 'Manajemen stok & kupon'],
+  },
+  {
+    name: 'Custom',
+    desc: 'Butuh alur khusus di luar paket standar.',
+    price: 'Custom',
+    original: '',
+    renewal: 'Penawaran setelah konsultasi',
+    cta: 'Konsultasi Gratis',
+    featured: false,
+    perks: ['Bebas request fitur', 'Desain sesuai alur bisnis', 'Integrasi API/sistem lama', 'Pendampingan prioritas', 'Estimasi transparan'],
   },
 ]
 
@@ -264,7 +274,7 @@ const testimonials = [
 
             <p class="mx-auto mt-4 max-w-xl text-[15px] leading-relaxed text-brand-100/90 sm:mt-6 sm:text-base lg:text-lg sm:mx-0">
               Software house di Bandar Lampung yang membuat website bisnis cepat, kredibel, dan mudah ditemukan
-              di Google — untuk UMKM, klinik, toko online, hingga perusahaan di seluruh Provinsi Lampung.
+              di Google untuk UMKM, klinik, toko online, hingga perusahaan di seluruh Provinsi Lampung.
             </p>
 
             <div class="mt-6 flex flex-col justify-center gap-3 sm:mt-8 sm:flex-row sm:gap-4 lg:justify-start">
@@ -366,7 +376,7 @@ const testimonials = [
             <h2 class="mt-2 text-2xl font-extrabold tracking-tight text-slate-900 sm:text-3xl">
               Solusi Digital Sesuai Kebutuhan Bisnis Anda
             </h2>
-            <p class="mt-3 text-base leading-relaxed text-slate-600 sm:mt-4 sm:text-lg">Bukan sekadar pajangan — website yang kami bangun adalah mesin pencetak omzet.</p>
+            <p class="mt-3 text-base leading-relaxed text-slate-600 sm:mt-4 sm:text-lg">Bukan sekadar pajangan. Website yang kami bangun adalah mesin pencetak omzet.</p>
           </div>
 
           <div class="mt-8 grid gap-4 sm:grid-cols-2 sm:gap-6 lg:mt-12 lg:grid-cols-4">
@@ -384,6 +394,12 @@ const testimonials = [
                 </li>
               </ul>
             </div>
+          </div>
+          <div class="reveal mt-8 text-center sm:mt-10">
+            <NuxtLink to="/layanan" class="inline-flex items-center gap-2 rounded-full border-2 border-brand-600 px-6 py-3 text-sm font-bold text-brand-600 transition-all hover:-translate-y-0.5 hover:bg-brand-600 hover:text-white sm:px-7 sm:py-3.5 sm:text-base">
+              Lihat Semua Layanan
+              <AppIcon name="arrowRight" class="h-4 w-4 sm:h-5 sm:w-5" />
+            </NuxtLink>
           </div>
         </div>
       </section>
@@ -421,13 +437,13 @@ const testimonials = [
             <p class="mt-3 text-base leading-relaxed text-slate-600 sm:mt-4 sm:text-lg">Semua paket sudah termasuk domain, hosting, dan desain. Cukup isi konten.</p>
           </div>
 
-          <div class="mt-8 grid items-start gap-4 sm:gap-6 lg:mt-12 lg:grid-cols-3">
+          <div class="mt-8 grid items-start gap-4 sm:gap-6 lg:mt-12 lg:grid-cols-2 xl:grid-cols-4">
             <div v-for="plan in plans" :key="plan.name"
               :class="[
                 'reveal relative rounded-2xl border bg-white p-7',
                 plan.featured ? 'border-brand-600 shadow-2xl shadow-brand-600/15 lg:-mt-4' : 'border-slate-200',
               ]">
-              <span v-if="plan.badge" class="absolute -top-3.5 left-1/2 -translate-x-1/2 rounded-full bg-brand-600 px-4 py-1 text-xs font-bold tracking-wider text-white uppercase">
+              <span v-if="plan.badge" class="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 whitespace-nowrap rounded-full bg-brand-600 px-3.5 py-1 text-xs font-bold tracking-wider text-white uppercase shadow-md">
                 Paling Populer
               </span>
 
@@ -435,7 +451,8 @@ const testimonials = [
               <p class="mt-1 text-sm text-slate-500">{{ plan.desc }}</p>
 
               <div class="mt-4 sm:mt-5">
-                <p class="text-xs font-bold text-slate-400 line-through sm:text-sm">{{ plan.original }}</p>
+                <p v-if="plan.original" class="text-xs font-bold text-slate-400 line-through sm:text-sm">{{ plan.original }}</p>
+                <p v-else class="text-xs font-bold text-transparent select-none sm:text-sm">&nbsp;</p>
                 <p class="mt-0.5 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">{{ plan.price }}</p>
                 <p class="mt-1 text-xs font-medium text-slate-500">{{ plan.renewal }}</p>
               </div>
@@ -552,7 +569,7 @@ const testimonials = [
           <div class="reveal text-center">
             <p class="text-xs font-bold tracking-wider text-brand-600 uppercase sm:text-sm">Pertanyaan Umum</p>
             <h2 class="mt-2 text-2xl font-extrabold tracking-tight text-slate-900 sm:text-3xl">
-              Jasa Website Lampung — Tanya Jawab
+              Jasa Website Lampung: Tanya Jawab
             </h2>
           </div>
 

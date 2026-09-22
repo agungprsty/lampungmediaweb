@@ -1,4 +1,4 @@
-# LampungMediaWeb — Jasa Pembuatan Website Lampung
+# LampungMediaWeb | Jasa Pembuatan Website Lampung
 
 Software house di Bandar Lampung: company profile, toko online, landing page, aplikasi web & SEO. Desain premium, super cepat, bergaransi 30 hari. Mobile-first.
 
@@ -43,7 +43,7 @@ nuxt.config.ts          # SEO head, Vite + Tailwind, icon bundle
 
 ## Mobile-first
 
-Semua section pakai base kecil (`text-2xl`, `py-10`, `px-4`, `gap-4`) lalu membesar di `sm:`/`lg:` (`sm:text-3xl`, `lg:py-24`). Hero `h1` base `text-[28px]`, button `py-3 text-base` — cek di Chrome DevTools 360px.
+Semua section pakai base kecil (`text-2xl`, `py-10`, `px-4`, `gap-4`) lalu membesar di `sm:`/`lg:` (`sm:text-3xl`, `lg:py-24`). Hero `h1` base `text-[28px]`, button `py-3 text-base` . Cek di Chrome DevTools 360px.
 
 ## Deploy
 

@@ -5,10 +5,10 @@ const open = ref(false)
 
 const nav = [
   { label: 'Layanan', href: '/layanan' },
-  { label: 'Tim', href: '/team' },
   { label: 'Proses', href: '/#proses' },
   { label: 'Harga', href: '/#harga' },
   { label: 'Proyek', href: '/#proyek' },
+  { label: 'Tim', href: '/team' },
 ]
 
 onMounted(() => {
@@ -32,7 +32,7 @@ onMounted(() => {
     <!-- Header -->
     <header class="fixed inset-x-0 top-0 z-50 border-b border-slate-200/80 bg-white/85 backdrop-blur-md">
       <div class="mx-auto flex h-14 max-w-6xl items-center justify-between px-4 sm:h-16 sm:px-6 lg:h-20 lg:px-8">
-        <a href="/" class="flex items-center" aria-label="LampungMediaWeb — Jasa Website Lampung">
+        <a href="/" class="flex items-center" aria-label="LampungMediaWeb, Jasa Website Lampung">
           <AppLogo class="text-[15px] sm:text-[20px] lg:text-[26px]" />
         </a>
 

@@ -91,7 +91,7 @@ const next = SERVICES[(SERVICES.findIndex((s) => s.slug === service.slug) + 1) %
         <aside class="rounded-3xl bg-brand-900 p-5 text-white sm:p-7 lg:sticky lg:top-20">
           <h2 class="text-lg font-extrabold">Perkiraan &amp; Cara Kerja</h2>
           <p class="mt-2 text-sm leading-relaxed text-brand-100">
-            Harga beda-beda tiap proyek — tergantung jumlah halaman, fitur, dan konten yang disiapkan.
+            Harga tiap proyek beda, tergantung jumlah halaman, fitur, dan konten yang disiapkan.
             Pengerjaan juga tergantung antrean.
           </p>
           <div class="mt-6 space-y-3 text-sm font-semibold">
