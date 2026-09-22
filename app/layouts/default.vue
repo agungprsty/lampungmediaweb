@@ -5,6 +5,7 @@ const open = ref(false)
 
 const nav = [
   { label: 'Layanan', href: '/layanan' },
+  { label: 'Tim', href: '/team' },
   { label: 'Proses', href: '/#proses' },
   { label: 'Harga', href: '/#harga' },
   { label: 'Proyek', href: '/#proyek' },
@@ -106,10 +107,10 @@ onMounted(() => {
           <div>
             <h4 class="text-base font-bold text-white sm:text-lg">Perusahaan</h4>
             <ul class="mt-4 space-y-3 text-sm font-medium sm:mt-5">
-              <li><a href="/#proses" class="transition-colors hover:text-white">Tentang LampungMediaWeb</a></li>
+              <li><NuxtLink to="/team" class="transition-colors hover:text-white">Tim Kami</NuxtLink></li>
+              <li><a href="/#proses" class="transition-colors hover:text-white">Cara Kami Bekerja</a></li>
               <li><a href="/#harga" class="transition-colors hover:text-white">Paket &amp; Harga</a></li>
               <li><a href="/#proyek" class="transition-colors hover:text-white">Portofolio</a></li>
-              <li><a href="/#proses" class="transition-colors hover:text-white">Cara Kami Bekerja</a></li>
             </ul>
           </div>
 
