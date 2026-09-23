@@ -18,6 +18,17 @@ useHead({
       type: 'application/ld+json',
       innerHTML: JSON.stringify({
         '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Beranda', item: 'https://lampungmediaweb.com/' },
+          { '@type': 'ListItem', position: 2, name: 'Layanan', item: 'https://lampungmediaweb.com/layanan' },
+        ],
+      }),
+    },
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
         '@type': 'ItemList',
         name: 'Layanan Pembuatan Website LampungMediaWeb',
         url: 'https://lampungmediaweb.com/layanan',
@@ -38,13 +49,16 @@ useHead({
   <section id="jenis" class="pt-20 pb-12 sm:pt-28 sm:pb-16 lg:pt-32 lg:pb-20">
     <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
       <div class="max-w-3xl">
-        <p class="text-xs font-bold uppercase tracking-widest text-brand-600 sm:text-sm">Layanan Kami</p>
-        <h1 class="mt-2 text-2xl font-extrabold tracking-tight text-slate-900 sm:mt-3 sm:text-3xl lg:text-4xl">
+        <nav class="text-xs font-semibold text-slate-500 sm:text-sm" aria-label="Breadcrumb">
+          <NuxtLink to="/" class="hover:text-brand-600">Beranda</NuxtLink>
+          <span class="mx-2">/</span>
+          <span class="text-brand-600" aria-current="page">Layanan</span>
+        </nav>
+        <h1 class="mt-4 text-2xl font-extrabold tracking-tight text-slate-900 sm:mt-5 sm:text-3xl lg:text-4xl">
           Jenis Website yang Kami Kerjakan
         </h1>
         <p class="mt-3 text-base leading-relaxed text-slate-600 sm:mt-4 sm:text-lg">
-          Kami tidak kerja dengan satu template umum. Tiap bisnis beda, jadi layanannya juga
-          kami pecah per jenis. Cari yang paling mirip situasi Anda, atau langsung tanya. Lebih cepat daripada menebak sendiri.
+          Cari yang paling sesuai dengan kebutuhan Anda, atau langsung tanya. Lebih cepat daripada menebak sendiri.
         </p>
       </div>
 

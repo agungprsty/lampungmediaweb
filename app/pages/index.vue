@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useHead } from '#imports'
+import { PORTFOLIO } from '~/data/portfolio'
 
 useHead({
   title: 'Jasa Pembuatan Website di Lampung & Bandar Lampung | LampungMediaWeb',
@@ -155,56 +156,7 @@ const plans = [
   },
 ]
 
-const portfolio = [
-  {
-    tag: 'Company Profile',
-    grad: 'from-amber-400/80 to-orange-500/80',
-    title: 'PT. Konstruksi Lampung Jaya',
-    domain: 'konstruksilampungjaya.co.id',
-    desc: 'Website kontraktor dengan galeri 120+ proyek, sertifikat, dan form estimasi biaya yang diintegrasikan ke WhatsApp.',
-    result: '+45 proyek tender dalam setahun',
-  },
-  {
-    tag: 'Toko Online',
-    grad: 'from-emerald-400/80 to-teal-600/80',
-    title: 'Krakatau Roastery',
-    domain: 'krakatauroastery.com',
-    desc: 'E-commerce biji kopi Lampung dengan keranjang, pembayaran QRIS/BCA, dan ongkir otomatis JNE & J&T.',
-    result: '3× omzet online dalam 6 bulan',
-  },
-  {
-    tag: 'Sistem Booking',
-    grad: 'from-violet-400/80 to-indigo-600/80',
-    title: 'Glow Aesthetic Clinic',
-    domain: 'glowclinic.id',
-    desc: 'Website klinik kecantikan dengan booking jadwal dokter online dan pengingat WhatsApp otomatis.',
-    result: '1.200+ reservasi online/tahun',
-  },
-  {
-    tag: 'Toko Online',
-    grad: 'from-sky-400/80 to-blue-600/80',
-    title: 'Batik Khatulistiwa',
-    domain: 'batikkhatulistiwa.com',
-    desc: 'Toko online batik khas Lampung. Stok, kupon diskon, dan laporan penjualan dikelola sendiri oleh pemilik.',
-    result: '1.800+ produk terjual online',
-  },
-  {
-    tag: 'Landing Page',
-    grad: 'from-rose-400/80 to-pink-600/80',
-    title: 'RentCar Bandar Lampung',
-    domain: 'rentcarlampung.com',
-    desc: 'Landing page iklan Google + Meta dengan form pemesanan 1 langkah dan tracking konversi penuh.',
-    result: 'CPA turun 40% dari iklan',
-  },
-  {
-    tag: 'System Aplikasi',
-    grad: 'from-teal-400/80 to-cyan-600/80',
-    title: 'Klinik Sehati',
-    domain: 'sehati-medical.com',
-    desc: 'Sistem rekam medis digital dan manajemen antrean pasien untuk jaringan klinik di Bandar Lampung.',
-    result: '5.000+ pasien terdaftar',
-  },
-]
+const portfolio = PORTFOLIO
 
 const faq = [
   {
@@ -253,11 +205,92 @@ const testimonials = [
   },
 ]
 
+const displayPortfolio = [...portfolio.slice(0, 6), ...portfolio.slice(0, 6), ...portfolio.slice(0, 6)]
+
+const carouselRef = ref<HTMLElement | null>(null)
+const isHovering = ref(false)
+let autoTimer: ReturnType<typeof setInterval> | null = null
+let resumeTimer: ReturnType<typeof setTimeout> | null = null
+
+const getCardWidth = () => {
+  const el = carouselRef.value
+  const first = el?.firstElementChild as HTMLElement | null
+  return (first?.offsetWidth ?? 320) + 16
+}
+const scrollCarousel = (dir: number) => {
+  const el = carouselRef.value
+  if (!el) return
+  el.scrollBy({ left: dir * getCardWidth(), behavior: 'smooth' })
+  pauseAuto()
+}
+const handleInfinite = () => {
+  const el = carouselRef.value
+  if (!el) return
+  const w = getCardWidth()
+  const setW = w * 6
+  // near start -> jump forward one set
+  if (el.scrollLeft < setW * 0.5) {
+    el.style.scrollBehavior = 'auto'
+    el.scrollLeft += setW
+    // force reflow then restore
+    void el.offsetHeight
+    el.style.scrollBehavior = 'smooth'
+  } else if (el.scrollLeft > setW * 2.5) {
+    el.style.scrollBehavior = 'auto'
+    el.scrollLeft -= setW
+    void el.offsetHeight
+    el.style.scrollBehavior = 'smooth'
+  }
+}
+const stopAuto = () => {
+  if (autoTimer) clearInterval(autoTimer)
+  autoTimer = null
+}
+const startAuto = () => {
+  stopAuto()
+  autoTimer = setInterval(() => {
+    if (isHovering.value || document.hidden) return
+    const el = carouselRef.value
+    if (!el) return
+    el.scrollBy({ left: getCardWidth(), behavior: 'smooth' })
+  }, 2800)
+}
+const pauseAuto = () => {
+  stopAuto()
+  if (resumeTimer) clearTimeout(resumeTimer)
+  resumeTimer = setTimeout(startAuto, 3500)
+}
+
+onMounted(() => {
+  const el = carouselRef.value
+  if (!el) return
+  const init = () => {
+    const w = getCardWidth()
+    el.style.scrollBehavior = 'auto'
+    el.scrollLeft = w * 6
+    void el.offsetHeight
+    el.style.scrollBehavior = 'smooth'
+  }
+  // wait for layout
+  requestAnimationFrame(() => requestAnimationFrame(init))
+  el.addEventListener('scroll', handleInfinite, { passive: true })
+  startAuto()
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) stopAuto()
+    else startAuto()
+  })
+})
+onBeforeUnmount(() => {
+  stopAuto()
+  if (resumeTimer) clearTimeout(resumeTimer)
+  carouselRef.value?.removeEventListener('scroll', handleInfinite)
+})
+
 </script>
 
 <template>
-    <!-- Hero -->
-    <section class="relative overflow-hidden bg-brand-900 pt-20 pb-12 text-white sm:pt-28 sm:pb-16 lg:pt-36 lg:pb-24">
+      <!-- Hero -->
+      <section class="relative flex min-h-[100vh] min-h-[100dvh] flex-col justify-center overflow-hidden bg-brand-900 pb-8 pt-14 text-white sm:pb-12 sm:pt-16 lg:pb-12 lg:pt-20">
         <div class="pointer-events-none absolute inset-0" aria-hidden="true">
           <div class="absolute -right-20 -top-20 h-96 w-96 rounded-full bg-brand-600/30 blur-3xl"></div>
           <div class="absolute -bottom-24 -left-16 h-80 w-80 rounded-full bg-accent-500/20 blur-3xl"></div>
@@ -265,7 +298,7 @@ const testimonials = [
           <div class="absolute bottom-16 right-10 h-16 w-16 rounded-lg border border-white/10 -rotate-12"></div>
         </div>
 
-        <div class="relative mx-auto grid max-w-6xl gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:items-center lg:gap-16 lg:px-8">
+        <div class="relative mx-auto grid w-full max-w-6xl gap-12 px-4 py-8 sm:px-6 sm:py-10 lg:grid-cols-2 lg:items-center lg:gap-16 lg:px-8 lg:py-12">
           <div class="text-center lg:text-left">
             <h1 class="text-[28px] font-extrabold leading-[1.15] tracking-tight sm:text-4xl lg:text-5xl">
               Jasa Pembuatan Website<br />
@@ -350,7 +383,7 @@ const testimonials = [
         </div>
 
         <!-- Trust strip -->
-        <div class="relative mx-auto mt-10 max-w-6xl px-4 sm:px-6 lg:mt-16 lg:px-8">
+        <div class="relative mx-auto mt-8 w-full max-w-6xl px-4 sm:px-6 lg:mt-10 lg:px-8">
           <div class="grid grid-cols-3 divide-x divide-white/10 rounded-2xl border border-white/10 bg-white/5 py-5 text-center backdrop-blur sm:py-6 lg:py-8">
             <div class="px-2">
               <p class="text-2xl font-extrabold text-white sm:text-3xl lg:text-4xl">100+</p>
@@ -482,16 +515,28 @@ const testimonials = [
       <!-- Portfolio -->
       <section id="proyek" class="scroll-mt-20 border-y border-slate-100 bg-slate-50 py-14 sm:py-16 lg:py-24">
         <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <div class="reveal max-w-2xl">
-            <p class="text-xs font-bold tracking-wider text-brand-600 uppercase sm:text-sm">Proyek Terpilih</p>
-            <h2 class="mt-2 text-2xl font-extrabold tracking-tight text-slate-900 sm:text-3xl">
-              Karya yang Berdampak untuk Klien Kami
-            </h2>
+          <div class="reveal flex items-end justify-between gap-4">
+            <div class="max-w-2xl">
+              <p class="text-xs font-bold tracking-wider text-brand-600 uppercase sm:text-sm">Proyek Terpilih</p>
+              <h2 class="mt-2 text-2xl font-extrabold tracking-tight text-slate-900 sm:text-3xl">
+                Karya yang Berdampak untuk Klien Kami
+              </h2>
+            </div>
+            <div class="hidden shrink-0 items-center gap-2 sm:flex">
+              <button type="button" aria-label="Geser ke sebelumnya" class="flex h-9 w-9 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-600 shadow-sm transition hover:border-brand-300 hover:text-brand-600 active:scale-95" @click="scrollCarousel(-1)">
+                <AppIcon name="arrowRight" class="h-4 w-4 rotate-180" />
+              </button>
+              <button type="button" aria-label="Geser ke selanjutnya" class="flex h-9 w-9 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-600 shadow-sm transition hover:border-brand-300 hover:text-brand-600 active:scale-95" @click="scrollCarousel(1)">
+                <AppIcon name="arrowRight" class="h-4 w-4" />
+              </button>
+            </div>
           </div>
 
-          <div class="mt-8 grid gap-4 md:grid-cols-2 sm:gap-6 lg:mt-12 lg:grid-cols-3">
-            <a v-for="p in portfolio" :key="p.title" href="#" @click.prevent
-              class="reveal group overflow-hidden rounded-2xl border border-slate-200 bg-white transition-all hover:-translate-y-1 hover:shadow-xl">
+          <div ref="carouselRef" role="region" aria-label="Daftar proyek terpilih" tabindex="0"
+            class="mt-8 flex gap-4 overflow-x-auto scroll-smooth snap-x snap-mandatory pb-4 -mx-4 px-4 sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8 lg:mt-12 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+            @mouseenter="isHovering = true" @mouseleave="isHovering = false" @touchstart.passive="pauseAuto" @mousedown="pauseAuto">
+            <a v-for="(p, i) in displayPortfolio" :key="`${p.title}-${i}`" :href="p.url" target="_blank" rel="noopener"
+              class="group w-[84%] shrink-0 snap-start overflow-hidden rounded-2xl border border-slate-200 bg-white transition-all hover:-translate-y-1 hover:shadow-xl sm:w-[calc(50%-8px)] lg:w-[calc(33.333%-11px)]">
               <div class="relative aspect-[4/3] overflow-hidden border-b border-slate-100" aria-hidden="true">
                 <div class="flex items-center gap-1.5 border-b border-slate-100 bg-white px-4 py-2.5">
                   <span class="h-2.5 w-2.5 rounded-full bg-slate-200"></span>
@@ -500,15 +545,8 @@ const testimonials = [
                   <span class="ml-2 truncate rounded-md border border-slate-100 bg-slate-50 px-2 py-0.5 font-mono text-[10px] text-slate-400">{{ p.domain }}</span>
                 </div>
                 <div class="absolute inset-x-0 top-9 bottom-0">
-                  <div :class="['absolute inset-0 bg-linear-to-br', p.grad]"></div>
-                  <div class="absolute inset-0 grid grid-cols-3 grid-rows-3 gap-3 p-5 opacity-40">
-                    <div v-for="n in 9" :key="n" class="rounded-lg bg-white/40"></div>
-                  </div>
+                  <PortfolioThumb :item="p" />
                 </div>
-                <span class="absolute right-3 bottom-3 left-3 rounded-lg bg-white/90 px-3 py-1.5 text-xs font-bold text-slate-800 shadow-sm backdrop-blur">
-                  <span class="mr-1.5 inline-block h-2 w-2 rounded-full bg-emerald-500"></span>
-                  {{ p.result }}
-                </span>
               </div>
               <div class="p-6">
                 <div class="flex items-center justify-between gap-2">
@@ -520,12 +558,14 @@ const testimonials = [
             </a>
           </div>
 
-          <div class="reveal mt-12 text-center">
-            <a :href="wa('Halo LampungMediaWeb, saya ingin lihat lebih banyak portofolio')" target="_blank" rel="noopener"
-              class="inline-flex items-center gap-2 font-bold text-brand-600 transition-colors hover:text-brand-700">
+          <p class="reveal -mt-1 text-xs font-medium text-slate-400 sm:hidden">← geser untuk lihat lainnya</p>
+
+          <div class="reveal mt-8 text-center lg:mt-10">
+            <NuxtLink to="/proyek"
+              class="inline-flex items-center gap-2 rounded-full border-2 border-brand-600 px-6 py-3 text-sm font-bold text-brand-600 transition-all hover:-translate-y-0.5 hover:bg-brand-600 hover:text-white sm:px-7 sm:py-3.5 sm:text-base">
               Lihat lebih banyak portofolio
-              <AppIcon name="arrowRight" class="h-5 w-5" />
-            </a>
+              <AppIcon name="arrowRight" class="h-4 w-4 sm:h-5 sm:w-5" />
+            </NuxtLink>
           </div>
         </div>
       </section>

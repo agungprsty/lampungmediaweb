@@ -91,22 +91,6 @@ export const SERVICES: Service[] = [
     group: 'Properti & Travel',
   },
   {
-    slug: 'website-instansi-pemerintahan',
-    title: 'Instansi dan Pemerintahan',
-    icon: 'landmark',
-    tagline: 'Informasi publik yang mudah diakses warga.',
-    desc: 'Website desa, kecamatan, dinas, atau lembaga publik. Fokusnya bukan menarik pengunjung, tapi membuat informasi (profil, program, pengumuman, layanan) mudah ditemukan dan gampang dinavigasi.',
-    benefits: [
-      'Berita & pengumuman resmi',
-      'Profil dan struktur organisasi',
-      'Menu layanan publik & dokumen',
-      'Galeri kegiatan',
-      'Keamanan & backup rutin',
-    ],
-    bonus: 'Proses keputusan di bidang atau dinas terkait bisa makan waktu. Sebaiknya ajukan dari sekarang.',
-    group: 'Instansi & Publik',
-  },
-  {
     slug: 'website-lembaga-organisasi',
     title: 'Lembaga dan Organisasi',
     icon: 'users',
@@ -255,7 +239,6 @@ export const SERVICES: Service[] = [
 export const serviceGroups = [
   'Bisnis & Online Shop',
   'Properti & Travel',
-  'Instansi & Publik',
   'Pendidikan & Kesehatan',
   'Media & Berita',
   'Komunitas & Sosial',

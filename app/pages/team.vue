@@ -27,6 +27,17 @@ useHead({
       type: 'application/ld+json',
       innerHTML: JSON.stringify({
         '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Beranda', item: 'https://lampungmediaweb.com/' },
+          { '@type': 'ListItem', position: 2, name: 'Tim Kami', item: 'https://lampungmediaweb.com/team' },
+        ],
+      }),
+    },
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
         '@type': 'AboutPage',
         name: 'Tim LampungMediaWeb',
         url: 'https://lampungmediaweb.com/team',
@@ -47,12 +58,16 @@ useHead({
   <section class="pt-20 pb-12 sm:pt-28 sm:pb-16 lg:pt-32 lg:pb-20">
     <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
       <div class="mx-auto max-w-3xl text-center">
-        <p class="text-xs font-bold uppercase tracking-widest text-brand-600 sm:text-sm">Tim Kami</p>
-        <h1 class="mt-2 text-2xl font-extrabold tracking-tight text-slate-900 sm:mt-3 sm:text-3xl lg:text-4xl">
+        <nav class="flex justify-center text-xs font-semibold text-slate-500 sm:text-sm" aria-label="Breadcrumb">
+          <NuxtLink to="/" class="hover:text-brand-600">Beranda</NuxtLink>
+          <span class="mx-2">/</span>
+          <span class="text-brand-600" aria-current="page">Tim Kami</span>
+        </nav>
+        <h1 class="mt-4 text-2xl font-extrabold tracking-tight text-slate-900 sm:mt-5 sm:text-3xl lg:text-4xl">
           Orang di balik website yang cepat & kredibel
         </h1>
         <p class="mx-auto mt-3 max-w-2xl text-base leading-relaxed text-slate-600 sm:mt-4 sm:text-lg">
-          Tim kecil, respons cepat. Berbasis di Bandar Lampung, kerja hybrid untuk seluruh Lampung tanpa birokrasi berlapis.
+          Tim kecil, respons cepat. Kami kerja hybrid untuk seluruh Lampung tanpa birokrasi berlapis.
         </p>
       </div>
 
